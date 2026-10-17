@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # Actions 탭의 "Run workflow" 수동 실행 버튼
   push:
     branches: [main]
-    paths: ["index.html", "update_chart.py", "분위기별_추천곡_250.xlsx", ".github/workflows/update.yml"]
+    paths-ignore: ["data/**"] # 앱 파일을 올리면 바로 다시 공개 (차트 자동 저장은 제외)
 
 permissions:
   contents: write
@@ -67,8 +67,8 @@ jobs:
       - name: 공개할 파일만 모으기
         run: |
           mkdir _site
-          cp index.html _site/
-          cp -r data _site/
+          cp index.html app.js firebase-config.js manifest.webmanifest sw.js help.html seed_songs.json _site/
+          cp -r icons data _site/
 
       - uses: actions/configure-pages@v5
 
