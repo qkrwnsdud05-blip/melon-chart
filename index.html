@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#00b33c">
+<title>멜론 TOP100</title>
+<style>
+  :root {
+    --fs: 18px;
+    --bg: #f4f5f7;
+    --card: #ffffff;
+    --text: #111111;
+    --sub: #555555;
+    --line: #e3e5e8;
+    --green: #00a838;
+    --up: #e0262b;
+    --down: #1f63d6;
+    --usb-bg: #fff1b8;
+    --usb-text: #6b4e00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212; --card: #1e1e1e; --text: #f2f2f2; --sub: #b8b8b8; --line: #333;
+      --green: #2fd26a; --up: #ff6b6b; --down: #6ea8ff; --usb-bg: #4a3b00; --usb-text: #ffe28a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+    font-size: var(--fs); line-height: 1.35;
+  }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--card); border-bottom: 1px solid var(--line);
+    padding: 10px 16px; padding-top: max(10px, env(safe-area-inset-top));
+  }
+  .top { display: flex; align-items: center; gap: 8px; }
+  h1 { margin: 0; font-size: 1.25em; color: var(--green); flex: 1; white-space: nowrap; }
+  .size-btn {
+    min-width: 56px; height: 48px; border-radius: 12px;
+    border: 2px solid var(--line); background: var(--bg); color: var(--text);
+    font-size: 20px; font-weight: 700; font-family: inherit; cursor: pointer;
+  }
+  .size-btn:active { background: var(--line); }
+  .updated { margin-top: 4px; font-size: 0.85em; color: var(--sub); }
+  .updated b { color: var(--text); }
+  main { padding: 8px 12px 40px; max-width: 720px; margin: 0 auto; }
+  .song {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--card); border-radius: 14px; padding: 10px 12px; margin: 8px 0;
+    color: inherit; text-decoration: none; border: 1px solid var(--line);
+  }
+  .song:active { background: var(--line); }
+  .rank { width: 2.4em; text-align: center; flex-shrink: 0; }
+  .rank .num { font-size: 1.35em; font-weight: 800; display: block; }
+  .chg { font-size: 0.75em; font-weight: 700; display: block; white-space: nowrap; }
+  .chg.up { color: var(--up); }
+  .chg.down { color: var(--down); }
+  .chg.same { color: var(--sub); }
+  .chg.new { color: var(--green); }
+  .cover {
+    width: clamp(56px, 3.6em, 76px); height: clamp(56px, 3.6em, 76px); border-radius: 8px; flex-shrink: 0;
+    object-fit: cover; background: var(--line);
+  }
+  .info { min-width: 0; flex: 1; }
+  .title { font-weight: 700; word-break: keep-all; overflow-wrap: anywhere; }
+  .artist { color: var(--sub); font-size: 0.9em; margin-top: 2px; overflow-wrap: anywhere; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 4px; font-size: 0.8em; color: var(--sub); }
+  .usb {
+    background: var(--usb-bg); color: var(--usb-text); font-weight: 800;
+    padding: 1px 8px; border-radius: 999px;
+  }
+  .msg { text-align: center; color: var(--sub); padding: 40px 16px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <h1>멜론 TOP100</h1>
+    <button class="size-btn" id="smaller" aria-label="글자 작게">가−</button>
+    <button class="size-btn" id="bigger" aria-label="글자 크게">가+</button>
+  </div>
+  <div class="updated" id="updated">불러오는 중…</div>
+</header>
+<main id="list"><p class="msg">차트를 불러오는 중입니다…</p></main>
+
+<script>
+(function () {
+  // ---- 글자 크기 (이 휴대폰에 기억) ----
+  var SIZES = [14, 16, 18, 20, 23, 26, 30, 34];
+  var KEY = "melon-font-size";
+  var size = 18;
+  try { var saved = parseInt(localStorage.getItem(KEY), 10); if (SIZES.indexOf(saved) >= 0) size = saved; } catch (e) {}
+  function applySize() {
+    document.documentElement.style.setProperty("--fs", size + "px");
+    document.getElementById("smaller").disabled = size === SIZES[0];
+    document.getElementById("bigger").disabled = size === SIZES[SIZES.length - 1];
+    try { localStorage.setItem(KEY, String(size)); } catch (e) {}
+  }
+  function step(d) {
+    var i = SIZES.indexOf(size) + d;
+    if (i >= 0 && i < SIZES.length) { size = SIZES[i]; applySize(); }
+  }
+  document.getElementById("smaller").onclick = function () { step(-1); };
+  document.getElementById("bigger").onclick = function () { step(1); };
+  applySize();
+
+  // ---- 차트 ----
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function kstText(iso) {
+    var d = new Date(iso);
+    var p = {};
+    new Intl.DateTimeFormat("ko-KR", {
+      timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+    }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; });
+    return p.year + "." + p.month + "." + p.day + " " + p.hour + ":" + p.minute;
+  }
+  function changeHtml(c) {
+    if (!c) return "";
+    if (c.type === "new") return '<span class="chg new">NEW</span>';
+    if (c.type === "up") return '<span class="chg up">▲' + c.amount + "</span>";
+    if (c.type === "down") return '<span class="chg down">▼' + c.amount + "</span>";
+    return '<span class="chg same">−</span>';
+  }
+
+  fetch("data/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      document.getElementById("updated").innerHTML =
+        "마지막 갱신: <b>" + esc(kstText(data.updated_at)) + "</b>" +
+        (data.chart_time ? " · 멜론 " + esc(data.chart_time.split(" ")[1]) + " 차트" : "");
+      document.getElementById("list").innerHTML = data.songs.map(function (s) {
+        return '<a class="song" href="' + esc(s.url) + '">' +
+          '<div class="rank"><span class="num">' + s.rank + "</span>" + changeHtml(s.change) + "</div>" +
+          '<img class="cover" loading="lazy" alt="" src="' + esc(s.image) + '">' +
+          '<div class="info">' +
+            '<div class="title">' + esc(s.title) + "</div>" +
+            '<div class="artist">' + esc(s.artist) + "</div>" +
+            '<div class="meta">' +
+              (s.in_usb ? '<span class="usb">내 USB</span>' : "") +
+              (s.likes != null ? "<span>♥ " + Number(s.likes).toLocaleString("ko-KR") + "</span>" : "") +
+            "</div>" +
+          "</div></a>";
+      }).join("");
+    })
+    .catch(function () {
+      document.getElementById("updated").textContent = "차트를 불러오지 못했습니다.";
+      document.getElementById("list").innerHTML =
+        '<p class="msg">잠시 후 화면을 아래로 당겨 새로고침 해 주세요.</p>';
+    });
+})();
+</script>
+</body>
+</html>
