@@ -1,6 +1,6 @@
 // 엄마 노래 USB - 서비스 워커
 // 항상 인터넷에서 최신 파일을 먼저 받고, 안 되면 저장해 둔 파일로 화면을 띄웁니다.
-const CACHE = "usb-app-v2";
+const CACHE = "usb-app-v3";
 const SHELL = [
   "./",
   "index.html",
@@ -9,6 +9,7 @@ const SHELL = [
   "manifest.webmanifest",
   "help.html",
   "seed_songs.json",
+  "covers.json",
   "icons/icon-192.png",
   "icons/icon-512.png",
   "icons/apple-touch-icon.png",
