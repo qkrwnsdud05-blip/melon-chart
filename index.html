@@ -3,160 +3,403 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#00b33c">
-<title>멜론 TOP100</title>
+<meta name="theme-color" content="#f5f5f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="엄마 노래 USB">
+<title>엄마 노래 USB</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/favicon.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+  // 글자 크기를 화면이 그려지기 전에 적용 (깜빡임 방지)
+  try {
+    var s = parseFloat(localStorage.getItem("usb-font-scale"));
+    if (s >= 0.85 && s <= 2.2) document.documentElement.style.setProperty("--scale", s);
+  } catch (e) {}
+</script>
 <style>
   :root {
-    --fs: 18px;
-    --bg: #f4f5f7;
-    --card: #ffffff;
-    --text: #111111;
-    --sub: #555555;
-    --line: #e3e5e8;
-    --green: #00a838;
-    --up: #e0262b;
-    --down: #1f63d6;
-    --usb-bg: #fff1b8;
-    --usb-text: #6b4e00;
+    --scale: 1;
+    --bg: #f5f5f3;
+    --surface: #ffffff;
+    --surface-2: #efefec;
+    --text: #18181b;
+    --text-2: #67676d;
+    --text-3: #9a9aa0;
+    --line: #e7e7e3;
+    --ink: #18181b;
+    --on-ink: #ffffff;
+    --good: #1f8a5b;
+    --good-soft: #e5f3eb;
+    --bad: #d2453b;
+    --bad-soft: #fbe9e7;
+    --none: #d9d9d5;
+    --up: #e5484d;
+    --down: #3b6fd8;
+    --radius: 20px;
+    --shadow: 0 1px 2px rgba(20, 20, 20, .04), 0 4px 16px rgba(20, 20, 20, .04);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #121212; --card: #1e1e1e; --text: #f2f2f2; --sub: #b8b8b8; --line: #333;
-      --green: #2fd26a; --up: #ff6b6b; --down: #6ea8ff; --usb-bg: #4a3b00; --usb-text: #ffe28a;
+      --bg: #0f0f10; --surface: #1a1a1c; --surface-2: #26262a; --text: #f2f2f3; --text-2: #a5a5ac; --text-3: #6f6f76;
+      --line: #2c2c30; --ink: #f2f2f3; --on-ink: #111113; --good: #4fcf8e; --good-soft: #15291f; --bad: #ff6b60; --bad-soft: #2e1716;
+      --none: #3a3a3f; --up: #ff6b6b; --down: #6ea0ff; --shadow: none;
     }
   }
   * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { font-size: calc(17px * var(--scale)); -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
-    font-size: var(--fs); line-height: 1.35;
+    margin: 0; background: var(--bg); color: var(--text); line-height: 1.45; letter-spacing: -0.01em;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
   }
-  header {
-    position: sticky; top: 0; z-index: 10;
-    background: var(--card); border-bottom: 1px solid var(--line);
-    padding: 10px 16px; padding-top: max(10px, env(safe-area-inset-top));
+  button, input, select { font: inherit; color: inherit; letter-spacing: inherit; }
+  button { cursor: pointer; }
+  [hidden] { display: none !important; }
+  svg.i { width: 1.15em; height: 1.15em; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ---------- 상단 ---------- */
+  header.top {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(16px); backdrop-filter: saturate(180%) blur(16px);
+    padding: 10px 20px; padding-top: max(10px, env(safe-area-inset-top));
   }
-  .top { display: flex; align-items: center; gap: 8px; }
-  h1 { margin: 0; font-size: 1.25em; color: var(--green); flex: 1; white-space: nowrap; }
-  .size-btn {
-    min-width: 56px; height: 48px; border-radius: 12px;
-    border: 2px solid var(--line); background: var(--bg); color: var(--text);
-    font-size: 20px; font-weight: 700; font-family: inherit; cursor: pointer;
+  .top-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+  .brand { flex: 1; min-width: 0; }
+  .brand h1 { margin: 0; font-size: clamp(19px, 1.2rem, 26px); font-weight: 800; letter-spacing: -0.03em; white-space: nowrap; }
+  .brand p { margin: 0; color: var(--text-2); font-size: clamp(13px, .8rem, 18px); font-weight: 500; }
+  .size-ctl { display: flex; align-items: center; background: var(--surface-2); border-radius: 14px; padding: 3px; flex-shrink: 0; }
+  .size-ctl button {
+    border: 0; background: none; height: 44px; min-width: 50px; border-radius: 11px;
+    font-weight: 700; font-size: 17px; color: var(--text); padding: 0 8px;
   }
-  .size-btn:active { background: var(--line); }
-  .updated { margin-top: 4px; font-size: 0.85em; color: var(--sub); }
-  .updated b { color: var(--text); }
-  main { padding: 8px 12px 40px; max-width: 720px; margin: 0 auto; }
-  .song {
-    display: flex; align-items: center; gap: 12px;
-    background: var(--card); border-radius: 14px; padding: 10px 12px; margin: 8px 0;
-    color: inherit; text-decoration: none; border: 1px solid var(--line);
+  .size-ctl button span { font-size: 13px; vertical-align: 2px; margin-left: 1px; }
+  .size-ctl button:active { background: var(--surface); }
+  .size-ctl button:disabled { color: var(--text-3); }
+  .size-ctl .sep { width: 1px; height: 20px; background: var(--line); }
+  .demo-banner {
+    max-width: 760px; margin: 8px auto 0; border: 1px dashed var(--text-3); color: var(--text-2);
+    border-radius: 12px; padding: 6px 12px; font-size: clamp(12px, .78rem, 17px);
   }
-  .song:active { background: var(--line); }
-  .rank { width: 2.4em; text-align: center; flex-shrink: 0; }
-  .rank .num { font-size: 1.35em; font-weight: 800; display: block; }
-  .chg { font-size: 0.75em; font-weight: 700; display: block; white-space: nowrap; }
-  .chg.up { color: var(--up); }
-  .chg.down { color: var(--down); }
-  .chg.same { color: var(--sub); }
-  .chg.new { color: var(--green); }
-  .cover {
-    width: clamp(56px, 3.6em, 76px); height: clamp(56px, 3.6em, 76px); border-radius: 8px; flex-shrink: 0;
-    object-fit: cover; background: var(--line);
+
+  /* ---------- 본문 ---------- */
+  main { max-width: 760px; margin: 0 auto; padding: 4px 16px calc(120px + env(safe-area-inset-bottom)); }
+  .page-title { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.035em; margin: 14px 4px 4px; }
+  .page-sub { color: var(--text-2); margin: 0 4px 16px; }
+  .section-title { font-size: 1.05rem; font-weight: 700; margin: 28px 4px 10px; color: var(--text-2); }
+  .card { background: var(--surface); border-radius: var(--radius); padding: 20px; margin: 12px 0; box-shadow: var(--shadow); }
+  .muted { color: var(--text-2); }
+
+  /* 통계 */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stat { padding: 0 4px; }
+  .stat + .stat { border-left: 1px solid var(--line); padding-left: 16px; }
+  .stat-label { display: flex; align-items: center; gap: 6px; color: var(--text-2); font-size: .85rem; font-weight: 600; white-space: nowrap; }
+  .stat-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c); flex-shrink: 0; }
+  .stat b { display: block; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .meter { display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: var(--surface-2); margin-top: 18px; gap: 2px; }
+  .meter span { display: block; height: 100%; transition: width .4s ease; }
+  .meter-note { margin: 10px 0 0; font-size: .85rem; color: var(--text-2); }
+
+  /* 세그먼트 필터 */
+  .segment { display: grid; grid-template-columns: repeat(auto-fit, minmax(4.2em, 1fr)); gap: 4px; background: var(--surface-2); border-radius: 16px; padding: 4px; margin: 20px 0 10px; }
+  .segment button {
+    border: 0; background: none; border-radius: 12px; min-height: 46px; padding: 6px 10px;
+    font-weight: 600; color: var(--text-2); white-space: nowrap;
   }
-  .info { min-width: 0; flex: 1; }
-  .title { font-weight: 700; word-break: keep-all; overflow-wrap: anywhere; }
-  .artist { color: var(--sub); font-size: 0.9em; margin-top: 2px; overflow-wrap: anywhere; }
-  .meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 4px; font-size: 0.8em; color: var(--sub); }
-  .usb {
-    background: var(--usb-bg); color: var(--usb-text); font-weight: 800;
-    padding: 1px 8px; border-radius: 999px;
+  .segment button[aria-pressed="true"] { background: var(--surface); color: var(--text); font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .controls { display: grid; gap: 8px; }
+  @media (min-width: 640px) { .controls { grid-template-columns: 1fr 1fr; } }
+  .input-wrap { position: relative; }
+  .input-wrap svg.i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-3); pointer-events: none; }
+  .field {
+    width: 100%; min-height: 52px; border: 1.5px solid transparent; border-radius: 14px;
+    background: var(--surface); padding: 10px 14px; box-shadow: var(--shadow); appearance: none; -webkit-appearance: none;
   }
-  .msg { text-align: center; color: var(--sub); padding: 40px 16px; }
+  .input-wrap .field { padding-left: 2.6em; }
+  select.field, .input-wrap.select .field { padding-left: 14px; padding-right: 2.6em; }
+  .input-wrap.select svg.i { left: auto; right: 14px; }
+  .field:focus { outline: none; border-color: var(--ink); }
+  .field::placeholder { color: var(--text-3); }
+  .count-line { margin: 18px 4px 8px; color: var(--text-2); font-size: .9rem; font-weight: 600; }
+
+  /* 곡 목록 */
+  .list { list-style: none; margin: 0; padding: 0; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .list > li { padding: 16px 18px; }
+  .list > li + li { border-top: 1px solid var(--line); }
+  .song-t { font-weight: 700; font-size: 1.08rem; letter-spacing: -0.02em; word-break: keep-all; overflow-wrap: anywhere; }
+  .song-a { color: var(--text-2); margin-top: 2px; font-size: .92rem; overflow-wrap: anywhere; }
+  .song-a .dot { margin: 0 6px; color: var(--text-3); }
+  .badge-new { display: inline-block; font-size: .72rem; font-weight: 700; color: var(--text-2); border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; margin-left: 6px; vertical-align: 2px; }
+  .vote { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+  .vote button {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 52px; border: 0; border-radius: 14px; background: var(--surface-2); color: var(--text-2);
+    font-weight: 700; transition: background .15s, color .15s;
+  }
+  .vote button.good[aria-pressed="true"] { background: var(--good); color: #fff; }
+  .vote button.bad[aria-pressed="true"] { background: var(--bad); color: #fff; }
+  .vote button:active { transform: scale(.98); }
+  .empty { text-align: center; color: var(--text-2); padding: 40px 16px; }
+
+  /* 버튼 */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 56px; padding: 10px 20px; border-radius: 16px; border: 0;
+    background: var(--surface-2); color: var(--text); font-weight: 700; text-decoration: none;
+  }
+  .btn.primary { background: var(--ink); color: var(--on-ink); }
+  .btn.danger { background: var(--bad); color: #fff; }
+  .btn:disabled { opacity: .35; }
+  .btn.block { width: 100%; }
+  .btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; }
+  .text-btn { border: 0; background: var(--surface-2); color: var(--text-2); font-weight: 600; border-radius: 12px; min-height: 44px; padding: 4px 14px; flex-shrink: 0; font-size: .9rem; }
+
+  /* 행 목록 (별로 / 기록) */
+  .row { display: flex; align-items: center; gap: 14px; }
+  .row-main { flex: 1; min-width: 0; }
+  .idx { color: var(--text-3); font-weight: 700; width: 1.6em; text-align: right; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .note { color: var(--text-2); font-size: .9rem; margin: 10px 4px 0; }
+
+  .round-card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); margin: 12px 0; overflow: hidden; }
+  .round-card summary { list-style: none; cursor: pointer; padding: 18px 20px; display: flex; align-items: center; gap: 12px; }
+  .round-card summary::-webkit-details-marker { display: none; }
+  .round-no { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; }
+  .round-meta { color: var(--text-2); font-size: .88rem; }
+  .round-card summary svg.i { margin-left: auto; color: var(--text-3); transition: transform .2s; }
+  .round-card[open] summary svg.i { transform: rotate(180deg); }
+  .round-card .list { box-shadow: none; border-radius: 0; border-top: 1px solid var(--line); }
+  .round-foot { padding: 12px 20px 16px; color: var(--text-3); font-size: .8rem; border-top: 1px solid var(--line); }
+  .now-card { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .now-card b { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; }
+
+  /* 멜론 차트 */
+  .chart-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 10px 12px; }
+  .chart-link { display: flex; align-items: center; gap: 14px; flex: 1 1 10.5em; min-width: 0; color: inherit; text-decoration: none; }
+  .rank { width: 2.1em; text-align: center; flex-shrink: 0; }
+  .rank .n { display: block; font-size: 1.15rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .chg { display: block; font-size: .72rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .chg.up { color: var(--up); } .chg.down { color: var(--down); } .chg.same { color: var(--text-3); } .chg.new { color: var(--good); }
+  .cover { width: clamp(52px, 3.2rem, 72px); height: clamp(52px, 3.2rem, 72px); border-radius: 10px; object-fit: cover; background: var(--surface-2); flex-shrink: 0; }
+  .chart-info { min-width: 0; }
+  .in-usb { display: inline-flex; align-items: center; gap: 4px; color: var(--good); font-weight: 700; font-size: .88rem; white-space: nowrap; padding: 6px 4px; }
+  .add-btn {
+    display: inline-flex; align-items: center; gap: 4px; min-height: 44px; border-radius: 12px; border: 0;
+    background: var(--surface-2); color: var(--text); font-weight: 700; padding: 4px 14px; white-space: nowrap; font-size: .9rem;
+  }
+
+  /* 하단 탭 */
+  nav.tabs {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(16px); backdrop-filter: saturate(180%) blur(16px);
+    border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
+  }
+  .tabs-inner { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .tab {
+    border: 0; background: none; padding: 10px 2px 12px; min-height: 66px; min-width: 0;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    font-size: clamp(12px, .75rem, 17px); font-weight: 600; color: var(--text-3); word-break: keep-all; line-height: 1.2;
+  }
+  .tab svg.i { width: clamp(24px, 1.45rem, 30px); height: clamp(24px, 1.45rem, 30px); stroke-width: 1.8; }
+  .tab[aria-selected="true"] { color: var(--text); }
+  .tab[aria-selected="true"] svg.i { stroke-width: 2.2; }
+
+  /* 전체 화면 (로그인 등) */
+  .center-screen { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 24px; text-align: center; gap: 12px; }
+  .center-screen img { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,.12); margin-bottom: 12px; }
+  .center-screen h1 { margin: 0; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.03em; }
+  .center-screen p { margin: 0 0 12px; color: var(--text-2); max-width: 24em; }
+  .center-screen .btn { min-width: min(300px, 100%); }
+  .err { color: var(--bad) !important; font-weight: 600; }
+
+  /* 확인 창 / 알림 */
+  .modal { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.4); display: flex; align-items: flex-end; justify-content: center; padding: 12px; }
+  @media (min-width: 640px) { .modal { align-items: center; } }
+  .modal-box { background: var(--surface); border-radius: 24px; padding: 26px 22px 18px; width: 100%; max-width: 460px; max-height: 85vh; overflow: auto; margin-bottom: env(safe-area-inset-bottom); }
+  .modal-box h2 { margin: 0 0 8px; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.03em; }
+  .modal-body { color: var(--text-2); }
+  .modal-body p { margin: 6px 0; }
+  .modal-body b { color: var(--text); }
+  .modal-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 22px; }
+  .toast {
+    position: fixed; left: 50%; bottom: calc(86px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+    background: var(--ink); color: var(--on-ink); padding: 12px 20px; border-radius: 14px; z-index: 60;
+    font-weight: 600; max-width: calc(100% - 32px); text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,.2);
+  }
 </style>
 </head>
 <body>
-<header>
-  <div class="top">
-    <h1>멜론 TOP100</h1>
-    <button class="size-btn" id="smaller" aria-label="글자 작게">가−</button>
-    <button class="size-btn" id="bigger" aria-label="글자 크게">가+</button>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M17 14V2"/><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="13" height="13" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  </defs>
+</svg>
+
+<!-- 불러오는 중 -->
+<div id="screen-loading" class="center-screen">
+  <img src="icons/icon-192.png" alt="">
+  <p>불러오는 중…</p>
+</div>
+
+<!-- 로그인 -->
+<div id="screen-login" class="center-screen" hidden>
+  <img src="icons/icon-192.png" alt="">
+  <h1>엄마 노래 USB</h1>
+  <p>구글 계정으로 로그인해 주세요.<br>처음 한 번만 하면 다음부터는 바로 열려요.</p>
+  <button class="btn primary" data-act="login">Google 계정으로 계속하기</button>
+  <p id="login-error" class="err" hidden></p>
+</div>
+
+<!-- 권한 없음 / 오류 -->
+<div id="screen-denied" class="center-screen" hidden>
+  <img src="icons/icon-192.png" alt="">
+  <h1 id="denied-title">사용 권한이 없는 계정이에요</h1>
+  <p id="denied-msg"></p>
+  <button class="btn primary" data-act="relogin">다른 계정으로 로그인</button>
+  <button class="btn" data-act="reload">다시 시도</button>
+</div>
+
+<!-- 처음 시작 (250곡 넣기) -->
+<div id="screen-seed" class="center-screen" hidden>
+  <img src="icons/icon-192.png" alt="">
+  <h1>처음 시작하기</h1>
+  <p>엑셀 곡목록 <b id="seed-count">250</b>곡을 온라인 목록에 넣습니다.<br>처음 한 번만 하면 돼요.</p>
+  <button class="btn primary" data-act="seed">곡목록 넣기</button>
+</div>
+
+<!-- 앱 -->
+<div id="app" hidden>
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">
+        <h1>엄마 노래 USB</h1>
+        <p id="sub-line"></p>
+      </div>
+      <div class="size-ctl" role="group" aria-label="글자 크기">
+        <button data-act="font" data-dir="-1" id="font-down" aria-label="글자 작게">가<span>−</span></button>
+        <span class="sep"></span>
+        <button data-act="font" data-dir="1" id="font-up" aria-label="글자 크게">가<span>+</span></button>
+      </div>
+    </div>
+    <div class="demo-banner" id="demo-banner" hidden>체험 모드 · 이 기기에만 저장돼요 (Firebase 설정 전)</div>
+  </header>
+
+  <main>
+    <!-- 1. 평가하기 -->
+    <section data-tab="rate">
+      <h2 class="page-title">평가하기</h2>
+      <p class="page-sub">USB에 남길 곡은 좋음, 뺄 곡은 별로를 눌러 주세요.</p>
+      <div class="card">
+        <div class="stats" id="summary"></div>
+        <div class="meter" id="bar"></div>
+        <p class="meter-note" id="progress-note"></p>
+      </div>
+      <div class="segment" id="filter-chips" role="group" aria-label="보기">
+        <button data-act="filter" data-val="all">전체</button>
+        <button data-act="filter" data-val="none">미평가</button>
+        <button data-act="filter" data-val="good">좋음</button>
+        <button data-act="filter" data-val="bad">별로</button>
+      </div>
+      <div class="controls">
+        <div class="input-wrap select">
+          <select class="field" id="mood-select" aria-label="분위기 선택"></select>
+          <svg class="i"><use href="#i-chev"/></svg>
+        </div>
+        <div class="input-wrap">
+          <svg class="i"><use href="#i-search"/></svg>
+          <input class="field" id="search" type="search" placeholder="곡명·가수 검색" autocomplete="off">
+        </div>
+      </div>
+      <div class="count-line" id="rate-count"></div>
+      <ul class="list" id="rate-list"></ul>
+    </section>
+
+    <!-- 2. 교체하기 -->
+    <section data-tab="swap" hidden>
+      <h2 class="page-title">교체하기</h2>
+      <p class="page-sub">‘별로’ 곡 <b id="bad-count">0</b>곡을 USB에서 빼고 새 곡으로 바꿔요.</p>
+      <ul class="list" id="bad-list"></ul>
+      <div class="btn-row">
+        <button class="btn" data-act="copy-bad" id="copy-bad"><svg class="i"><use href="#i-copy"/></svg>목록 복사</button>
+        <button class="btn primary" data-act="complete" id="complete-btn"><svg class="i"><use href="#i-check"/></svg>교체 완료</button>
+      </div>
+      <p class="note">교체 완료를 누르면 별로 곡이 목록에서 빠지고 USB 회차가 하나 올라가요. 뺀 곡은 기록에 남아요.</p>
+
+      <h3 class="section-title">새 곡 직접 추가</h3>
+      <form class="card" id="add-form" autocomplete="off" style="display:grid;gap:10px">
+        <input class="field" name="title" placeholder="곡명" required style="background:var(--surface-2);box-shadow:none">
+        <input class="field" name="artist" placeholder="가수" required style="background:var(--surface-2);box-shadow:none">
+        <div class="input-wrap select">
+          <select class="field" name="mood" id="add-mood" aria-label="분위기" style="background:var(--surface-2);box-shadow:none"></select>
+          <svg class="i"><use href="#i-chev"/></svg>
+        </div>
+        <button class="btn primary block" type="submit"><svg class="i"><use href="#i-plus"/></svg>목록에 추가</button>
+      </form>
+    </section>
+
+    <!-- 3. 기록 -->
+    <section data-tab="history" hidden>
+      <h2 class="page-title">기록</h2>
+      <p class="page-sub">회차마다 어떤 곡을 뺐는지 볼 수 있어요.</p>
+      <div class="card now-card" id="current-state"></div>
+      <div id="round-list"></div>
+
+      <h3 class="section-title">계정 · 도움말</h3>
+      <div class="card">
+        <p style="margin:0 0 14px" id="account-line"></p>
+        <div class="btn-row" style="margin:0">
+          <a class="btn" href="help.html">홈 화면 추가 방법</a>
+          <button class="btn" data-act="logout" id="logout-btn">로그아웃</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 멜론 차트 -->
+    <section data-tab="melon" hidden>
+      <h2 class="page-title">멜론 TOP100</h2>
+      <p class="page-sub" id="chart-updated">불러오는 중…</p>
+      <ul class="list" id="chart-list"></ul>
+    </section>
+  </main>
+
+  <nav class="tabs" role="tablist">
+    <div class="tabs-inner">
+      <button class="tab" role="tab" data-act="tab" data-val="rate"><svg class="i"><use href="#i-up"/></svg>평가하기</button>
+      <button class="tab" role="tab" data-act="tab" data-val="swap"><svg class="i"><use href="#i-swap"/></svg>교체하기</button>
+      <button class="tab" role="tab" data-act="tab" data-val="history"><svg class="i"><use href="#i-clock"/></svg>기록</button>
+      <button class="tab" role="tab" data-act="tab" data-val="melon"><svg class="i"><use href="#i-music"/></svg>멜론 차트</button>
+    </div>
+  </nav>
+</div>
+
+<!-- 확인 창 -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h2 id="modal-title"></h2>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-btns">
+      <button class="btn" id="modal-cancel">취소</button>
+      <button class="btn primary" id="modal-ok">확인</button>
+    </div>
   </div>
-  <div class="updated" id="updated">불러오는 중…</div>
-</header>
-<main id="list"><p class="msg">차트를 불러오는 중입니다…</p></main>
+</div>
+<div class="toast" id="toast" hidden></div>
 
-<script>
-(function () {
-  // ---- 글자 크기 (이 휴대폰에 기억) ----
-  var SIZES = [14, 16, 18, 20, 23, 26, 30, 34];
-  var KEY = "melon-font-size";
-  var size = 18;
-  try { var saved = parseInt(localStorage.getItem(KEY), 10); if (SIZES.indexOf(saved) >= 0) size = saved; } catch (e) {}
-  function applySize() {
-    document.documentElement.style.setProperty("--fs", size + "px");
-    document.getElementById("smaller").disabled = size === SIZES[0];
-    document.getElementById("bigger").disabled = size === SIZES[SIZES.length - 1];
-    try { localStorage.setItem(KEY, String(size)); } catch (e) {}
-  }
-  function step(d) {
-    var i = SIZES.indexOf(size) + d;
-    if (i >= 0 && i < SIZES.length) { size = SIZES[i]; applySize(); }
-  }
-  document.getElementById("smaller").onclick = function () { step(-1); };
-  document.getElementById("bigger").onclick = function () { step(1); };
-  applySize();
-
-  // ---- 차트 ----
-  function esc(s) {
-    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-    });
-  }
-  function kstText(iso) {
-    var d = new Date(iso);
-    var p = {};
-    new Intl.DateTimeFormat("ko-KR", {
-      timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit",
-      hour: "2-digit", minute: "2-digit", hourCycle: "h23"
-    }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; });
-    return p.year + "." + p.month + "." + p.day + " " + p.hour + ":" + p.minute;
-  }
-  function changeHtml(c) {
-    if (!c) return "";
-    if (c.type === "new") return '<span class="chg new">NEW</span>';
-    if (c.type === "up") return '<span class="chg up">▲' + c.amount + "</span>";
-    if (c.type === "down") return '<span class="chg down">▼' + c.amount + "</span>";
-    return '<span class="chg same">−</span>';
-  }
-
-  fetch("data/latest.json?t=" + Date.now(), { cache: "no-store" })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (data) {
-      document.getElementById("updated").innerHTML =
-        "마지막 갱신: <b>" + esc(kstText(data.updated_at)) + "</b>" +
-        (data.chart_time ? " · 멜론 " + esc(data.chart_time.split(" ")[1]) + " 차트" : "");
-      document.getElementById("list").innerHTML = data.songs.map(function (s) {
-        return '<a class="song" href="' + esc(s.url) + '">' +
-          '<div class="rank"><span class="num">' + s.rank + "</span>" + changeHtml(s.change) + "</div>" +
-          '<img class="cover" loading="lazy" alt="" src="' + esc(s.image) + '">' +
-          '<div class="info">' +
-            '<div class="title">' + esc(s.title) + "</div>" +
-            '<div class="artist">' + esc(s.artist) + "</div>" +
-            '<div class="meta">' +
-              (s.in_usb ? '<span class="usb">내 USB</span>' : "") +
-              (s.likes != null ? "<span>♥ " + Number(s.likes).toLocaleString("ko-KR") + "</span>" : "") +
-            "</div>" +
-          "</div></a>";
-      }).join("");
-    })
-    .catch(function () {
-      document.getElementById("updated").textContent = "차트를 불러오지 못했습니다.";
-      document.getElementById("list").innerHTML =
-        '<p class="msg">잠시 후 화면을 아래로 당겨 새로고침 해 주세요.</p>';
-    });
-})();
-</script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

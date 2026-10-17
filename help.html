@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f3">
+<title>홈 화면에 추가하는 방법</title>
+<link rel="icon" type="image/png" href="icons/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root { --bg: #f5f5f3; --card: #fff; --text: #18181b; --sub: #67676d; --line: #e7e7e3; --soft: #efefec; --ink: #18181b; --on-ink: #fff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f0f10; --card: #1a1a1c; --text: #f2f2f3; --sub: #a5a5ac; --line: #2c2c30; --soft: #26262a; --ink: #f2f2f3; --on-ink: #111113; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 21px; letter-spacing: -0.01em;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; }
+  .hero { text-align: center; }
+  .hero img { width: 88px; height: 88px; border-radius: 22px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+  h1 { font-size: 1.45em; margin: 18px 0 6px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.35; }
+  .hero p { margin: 0; color: var(--sub); }
+  .switch { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 26px 0 8px; background: var(--soft); border-radius: 16px; padding: 4px; }
+  .switch a {
+    display: block; text-align: center; padding: 12px 8px; border-radius: 12px; font-weight: 700;
+    color: var(--text); text-decoration: none; line-height: 1.35;
+  }
+  .switch a:first-child { background: var(--card); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  section { background: var(--card); border-radius: 22px; padding: 24px 20px; margin: 16px 0; box-shadow: 0 1px 2px rgba(20,20,20,.04), 0 4px 16px rgba(20,20,20,.04); }
+  h2 { font-size: 1.2em; margin: 0 0 18px; font-weight: 800; letter-spacing: -0.02em; }
+  ol { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  ol li { counter-increment: step; position: relative; padding: 0 0 20px 52px; min-height: 40px; }
+  ol li::before {
+    content: counter(step); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--ink); color: var(--on-ink); font-weight: 700; font-size: .8em;
+    display: flex; align-items: center; justify-content: center;
+  }
+  ol li:last-child { padding-bottom: 0; }
+  b.key { background: var(--soft); padding: 1px 8px; border-radius: 8px; font-weight: 700; }
+  .tip { color: var(--sub); font-size: .88em; margin: 16px 0 0; }
+  .addr { text-align: center; margin: 20px 0 0; color: var(--sub); font-size: .9em; }
+  .addr b { color: var(--text); word-break: break-all; }
+  .back { display: block; text-align: center; margin-top: 28px; padding: 18px; border-radius: 16px; background: var(--ink); color: var(--on-ink); font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <img src="icons/icon-192.png" alt="">
+    <h1>‘엄마 노래 USB’<br>휴대폰에 앱처럼 놓기</h1>
+    <p>한 번만 해 두면 다음부터는<br>바탕화면 아이콘만 누르면 돼요.</p>
+  </div>
+
+  <p class="addr">앱 주소<br><b>qkrwnsdud05-blip.github.io/melon-chart</b></p>
+
+  <div class="switch">
+    <a href="#android">갤럭시<br>(안드로이드)</a>
+    <a href="#iphone">아이폰</a>
+  </div>
+
+  <section id="android">
+    <h2>갤럭시 (안드로이드)</h2>
+    <ol>
+      <li><b>크롬</b> 또는 <b>삼성 인터넷</b>으로 이 앱 주소를 엽니다.</li>
+      <li>
+        <b>크롬</b>: 오른쪽 위 <b class="key">⋮</b> (점 3개)를 누릅니다.<br>
+        <b>삼성 인터넷</b>: 아래쪽 <b class="key">≡</b> (줄 3개)를 누릅니다.
+      </li>
+      <li><b class="key">홈 화면에 추가</b> 또는 <b class="key">앱 설치</b>를 누릅니다.</li>
+      <li><b class="key">추가</b> (또는 <b class="key">설치</b>)를 누릅니다.</li>
+      <li>바탕화면에 <b>검은색 USB 아이콘</b>이 생기면 끝!</li>
+    </ol>
+    <p class="tip">화면 아래에 ‘앱 설치’ 안내가 저절로 뜨면 그걸 눌러도 돼요.</p>
+  </section>
+
+  <section id="iphone">
+    <h2>아이폰</h2>
+    <ol>
+      <li>꼭 <b>사파리(Safari)</b>로 이 앱 주소를 엽니다.</li>
+      <li>화면 아래 가운데 <b class="key">공유 버튼 (네모에 위쪽 화살표 ⬆)</b>을 누릅니다.<br>
+        <span class="tip">버튼이 안 보이면 화면을 살짝 위로 올려 보세요.</span></li>
+      <li>메뉴를 위로 올려서 <b class="key">홈 화면에 추가</b>를 누릅니다.</li>
+      <li>오른쪽 위 <b class="key">추가</b>를 누릅니다.</li>
+      <li>바탕화면에 <b>검은색 USB 아이콘</b>이 생기면 끝!</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>처음 열 때 한 번만</h2>
+    <ol>
+      <li>바탕화면의 <b>엄마 노래 USB</b> 아이콘을 누릅니다.</li>
+      <li><b class="key">구글 계정으로 로그인</b>을 누르고, 엄마 구글 계정을 고릅니다.</li>
+      <li>그다음부터는 로그인 없이 바로 열려요.</li>
+    </ol>
+    <p class="tip">글자가 작으면 위쪽 <b>가+</b> 를 누르세요. 크기는 기억돼요.</p>
+  </section>
+
+  <a class="back" href="./">← 앱으로 돌아가기</a>
+</main>
+</body>
+</html>
