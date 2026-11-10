@@ -1,125 +1,125 @@
 {
- "updated_at": "2026-11-11T05:47:18+09:00",
- "chart_time": "2026.11.11 05:00",
+ "updated_at": "2026-11-11T06:42:33+09:00",
+ "chart_time": "2026.11.11 06:00",
  "songs": [
   {
    "rank": 1,
    "song_id": "603382333",
    "title": "NEON",
    "artist": "A2O, A2O LITE",
-   "likes": 67074
+   "likes": 67083
   },
   {
    "rank": 2,
    "song_id": "602290711",
    "title": "꿈꾸던 어른이 되었나요?",
    "artist": "머무르",
-   "likes": 65827
+   "likes": 65844
   },
   {
    "rank": 3,
    "song_id": "603712834",
    "title": "With",
    "artist": "RESCENE (리센느)",
-   "likes": 68094
+   "likes": 68106
   },
   {
    "rank": 4,
    "song_id": "602862199",
    "title": "퇴사할게여 (Narr. 기안84)",
    "artist": "소연 (SOYEON)",
-   "likes": 61974
+   "likes": 61976
   },
   {
    "rank": 5,
    "song_id": "603709840",
    "title": "체포하겠어",
    "artist": "아일릿(ILLIT)",
-   "likes": 28650
+   "likes": 28656
   },
   {
    "rank": 6,
    "song_id": "37928381",
    "title": "LOVE ATTACK",
    "artist": "RESCENE (리센느)",
-   "likes": 173212
+   "likes": 173216
   },
   {
    "rank": 7,
    "song_id": "603712835",
    "title": "백화요란 (Inside Out)",
    "artist": "RESCENE (리센느)",
-   "likes": 42041
+   "likes": 42057
   },
   {
    "rank": 8,
    "song_id": "4277838",
    "title": "연애의 조건 (Love Options)",
    "artist": "베스티",
-   "likes": 35118
+   "likes": 35129
   },
   {
    "rank": 9,
    "song_id": "39231685",
    "title": "Deja Vu",
    "artist": "RESCENE (리센느)",
-   "likes": 79947
+   "likes": 79953
   },
   {
    "rank": 10,
    "song_id": "36985781",
    "title": "생각을 멈추다 보면",
    "artist": "최유리",
-   "likes": 64035
+   "likes": 64047
   },
   {
    "rank": 11,
    "song_id": "603448999",
    "title": "Looks Can Kill",
    "artist": "IVE (아이브)",
-   "likes": 23785
+   "likes": 23788
   },
   {
    "rank": 12,
    "song_id": "602024048",
    "title": "갑자기",
    "artist": "아이오아이 (I.O.I)",
-   "likes": 83436
+   "likes": 83438
   },
   {
    "rank": 13,
    "song_id": "602450078",
    "title": "Pretty Girl",
    "artist": "RESCENE (리센느)",
-   "likes": 82963
+   "likes": 82966
   },
   {
    "rank": 14,
    "song_id": "602322595",
    "title": "BAD",
    "artist": "ATEEZ(에이티즈)",
-   "likes": 42066
+   "likes": 42067
   },
   {
    "rank": 15,
    "song_id": "601807965",
    "title": "REDRED",
    "artist": "CORTIS (코르티스)",
-   "likes": 95384
+   "likes": 95386
   },
   {
    "rank": 16,
    "song_id": "602377105",
    "title": "만찬가",
    "artist": "태연 (TAEYEON)",
-   "likes": 56519
+   "likes": 56521
   },
   {
    "rank": 17,
    "song_id": "36397952",
    "title": "Drowning",
    "artist": "WOODZ",
-   "likes": 311973
+   "likes": 311976
   },
   {
    "rank": 18,
@@ -133,7 +133,7 @@
    "song_id": "36730261",
    "title": "사랑하게 될 거야",
    "artist": "한로로",
-   "likes": 152703
+   "likes": 152704
   },
   {
    "rank": 20,
@@ -147,14 +147,14 @@
    "song_id": "601719416",
    "title": "기쁨, 슬픔, 아름다운 마음",
    "artist": "AKMU (악뮤)",
-   "likes": 97455
+   "likes": 97459
   },
   {
    "rank": 22,
    "song_id": "601719493",
    "title": "Runaway",
    "artist": "RESCENE (리센느)",
-   "likes": 51241
+   "likes": 51246
   },
   {
    "rank": 23,
@@ -168,7 +168,7 @@
    "song_id": "38104031",
    "title": "내게 사랑이 뭐냐고 물어본다면",
    "artist": "로이킴",
-   "likes": 105577
+   "likes": 105580
   },
   {
    "rank": 25,
@@ -189,21 +189,21 @@
    "song_id": "39504779",
    "title": "0+0",
    "artist": "한로로",
-   "likes": 128497
+   "likes": 128499
   },
   {
    "rank": 28,
    "song_id": "603712833",
    "title": "Finest Thing",
    "artist": "RESCENE (리센느)",
-   "likes": 34689
+   "likes": 34692
   },
   {
    "rank": 29,
    "song_id": "37473973",
    "title": "Popcorn",
    "artist": "도경수(D.O.)",
-   "likes": 98633
+   "likes": 98634
   },
   {
    "rank": 30,
@@ -217,42 +217,42 @@
    "song_id": "601479669",
    "title": "캐치 캐치",
    "artist": "YENA (최예나)",
-   "likes": 54550
+   "likes": 54551
   },
   {
    "rank": 32,
    "song_id": "37928383",
    "title": "Pinball",
    "artist": "RESCENE (리센느)",
-   "likes": 45656
+   "likes": 45659
   },
   {
    "rank": 33,
-   "song_id": "601719413",
-   "title": "소문의 낙원",
-   "artist": "AKMU (악뮤)",
-   "likes": 92944
-  },
-  {
-   "rank": 34,
    "song_id": "601332163",
    "title": "RUDE!",
    "artist": "Hearts2Hearts (하츠투하츠)",
    "likes": 78331
   },
   {
+   "rank": 34,
+   "song_id": "601719413",
+   "title": "소문의 낙원",
+   "artist": "AKMU (악뮤)",
+   "likes": 92946
+  },
+  {
    "rank": 35,
    "song_id": "38733032",
    "title": "어제보다 슬픈 오늘",
    "artist": "우디 (Woody)",
-   "likes": 92758
+   "likes": 92759
   },
   {
    "rank": 36,
    "song_id": "603712836",
    "title": "MEME",
    "artist": "RESCENE (리센느)",
-   "likes": 31207
+   "likes": 31209
   },
   {
    "rank": 37,
@@ -266,14 +266,14 @@
    "song_id": "33411344",
    "title": "봄 내음보다 너를",
    "artist": "김나영",
-   "likes": 147134
+   "likes": 147135
   },
   {
    "rank": 39,
    "song_id": "37228861",
    "title": "천상연",
    "artist": "이창섭",
-   "likes": 152248
+   "likes": 152249
   },
   {
    "rank": 40,
@@ -284,17 +284,17 @@
   },
   {
    "rank": 41,
-   "song_id": "36699489",
-   "title": "그대만 있다면 (여름날 우리 X 너드커넥션 (Nerd Connection))",
-   "artist": "너드커넥션 (Nerd Connection)",
-   "likes": 181516
-  },
-  {
-   "rank": 42,
    "song_id": "600243411",
    "title": "Blue Valentine",
    "artist": "NMIXX",
    "likes": 123886
+  },
+  {
+   "rank": 42,
+   "song_id": "36699489",
+   "title": "그대만 있다면 (여름날 우리 X 너드커넥션 (Nerd Connection))",
+   "artist": "너드커넥션 (Nerd Connection)",
+   "likes": 181517
   },
   {
    "rank": 43,
@@ -308,14 +308,14 @@
    "song_id": "603712837",
    "title": "Dragon",
    "artist": "RESCENE (리센느)",
-   "likes": 30400
+   "likes": 30404
   },
   {
    "rank": 45,
    "song_id": "601879407",
    "title": "Heavy Serenade",
    "artist": "NMIXX",
-   "likes": 60903
+   "likes": 60904
   },
   {
    "rank": 46,
@@ -329,28 +329,28 @@
    "song_id": "31666417",
    "title": "주저하는 연인들을 위해",
    "artist": "잔나비",
-   "likes": 454476
+   "likes": 454475
   },
   {
    "rank": 48,
    "song_id": "38429074",
    "title": "모르시나요(PROD.로코베리)",
    "artist": "조째즈",
-   "likes": 111957
+   "likes": 111959
   },
   {
    "rank": 49,
    "song_id": "603175883",
    "title": "CRASH",
    "artist": "ALLDAY PROJECT",
-   "likes": 17703
+   "likes": 17707
   },
   {
    "rank": 50,
    "song_id": "38300904",
    "title": "toxic till the end",
    "artist": "로제 (ROSÉ)",
-   "likes": 163897
+   "likes": 163898
   },
   {
    "rank": 51,
@@ -420,21 +420,21 @@
    "song_id": "601237102",
    "title": "BANG BANG",
    "artist": "IVE (아이브)",
-   "likes": 70552
+   "likes": 70553
   },
   {
    "rank": 61,
    "song_id": "37140709",
    "title": "첫 만남은 계획대로 되지 않아",
    "artist": "TWS (투어스)",
-   "likes": 178987
+   "likes": 178988
   },
   {
    "rank": 62,
    "song_id": "603052340",
    "title": "Dear my crazy soulmate",
    "artist": "아이유",
-   "likes": 34625
+   "likes": 34627
   },
   {
    "rank": 63,
@@ -462,28 +462,28 @@
    "song_id": "603538665",
    "title": "삐그덕 (Feat. 아이유)",
    "artist": "Crush",
-   "likes": 14881
+   "likes": 14885
   },
   {
    "rank": 67,
    "song_id": "37375706",
    "title": "청혼하지 않을 이유를 못 찾았어",
    "artist": "이무진",
-   "likes": 79328
+   "likes": 79330
   },
   {
    "rank": 68,
-   "song_id": "38123338",
-   "title": "나는 반딧불",
-   "artist": "황가람",
-   "likes": 161403
-  },
-  {
-   "rank": 69,
    "song_id": "39298775",
    "title": "뛰어(JUMP)",
    "artist": "BLACKPINK",
    "likes": 100871
+  },
+  {
+   "rank": 69,
+   "song_id": "38123338",
+   "title": "나는 반딧불",
+   "artist": "황가람",
+   "likes": 161404
   },
   {
    "rank": 70,
@@ -532,7 +532,7 @@
    "song_id": "34061322",
    "title": "사랑은 늘 도망가",
    "artist": "임영웅",
-   "likes": 241900
+   "likes": 241902
   },
   {
    "rank": 77,
@@ -553,7 +553,7 @@
    "song_id": "39166708",
    "title": "Golden",
    "artist": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",
-   "likes": 193773
+   "likes": 193772
   },
   {
    "rank": 80,
@@ -574,7 +574,7 @@
    "song_id": "603052339",
    "title": "이 별로부터",
    "artist": "아이유",
-   "likes": 34841
+   "likes": 34842
   },
   {
    "rank": 83,
@@ -602,7 +602,7 @@
    "song_id": "30244931",
    "title": "봄날",
    "artist": "방탄소년단",
-   "likes": 499078
+   "likes": 499077
   },
   {
    "rank": 87,
@@ -616,14 +616,14 @@
    "song_id": "32872978",
    "title": "Dynamite",
    "artist": "방탄소년단",
-   "likes": 458643
+   "likes": 458641
   },
   {
    "rank": 89,
    "song_id": "601555642",
    "title": "SWIM",
    "artist": "방탄소년단",
-   "likes": 65179
+   "likes": 65180
   },
   {
    "rank": 90,
@@ -651,7 +651,7 @@
    "song_id": "1556553",
    "title": "Love Love Love (Feat. Yoong Jin Of Casker)",
    "artist": "에픽하이 (EPIK HIGH)",
-   "likes": 131325
+   "likes": 131326
   },
   {
    "rank": 94,
@@ -665,14 +665,14 @@
    "song_id": "35454426",
    "title": "Hype Boy",
    "artist": "NewJeans",
-   "likes": 318692
+   "likes": 318693
   },
   {
    "rank": 96,
    "song_id": "603574639",
    "title": "Boogie Woogie",
    "artist": "NCT DREAM",
-   "likes": 15314
+   "likes": 15322
   },
   {
    "rank": 97,
@@ -686,7 +686,7 @@
    "song_id": "603339938",
    "title": "푸른 하늘에 단비",
    "artist": "PLAVE",
-   "likes": 28028
+   "likes": 28029
   },
   {
    "rank": 99,
