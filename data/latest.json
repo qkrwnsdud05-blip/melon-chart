@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-15T01:42:40+09:00",
- "chart_time": "2026.11.15 01:00",
+ "updated_at": "2026-11-15T02:38:55+09:00",
+ "chart_time": "2026.11.15 02:00",
  "songs": [
   {
    "rank": 1,
@@ -10,7 +10,7 @@
    "album": "꿈꾸던 어른이 되었나요?",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/137/44/621/13744621_20260617115134_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=602290711",
-   "likes": 71927,
+   "likes": 71960,
    "change": {
     "type": "same",
     "amount": 0
@@ -25,10 +25,10 @@
    "album": "NEON",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/146/44/795/14644795_20261012141441_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603382333",
-   "likes": 68991,
+   "likes": 68996,
    "change": {
-    "type": "up",
-    "amount": 1
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -40,10 +40,10 @@
    "album": "PULSE",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/150/82/293/15082293_20261026170443_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603712834",
-   "likes": 72515,
+   "likes": 72530,
    "change": {
-    "type": "down",
-    "amount": 1
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -55,10 +55,10 @@
    "album": "끝내주는 인생",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/144/70/302/14470302_20260907113632_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=602862199",
-   "likes": 63016,
+   "likes": 63018,
    "change": {
-    "type": "up",
-    "amount": 5
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -70,10 +70,10 @@
    "album": "BREAK EVEN",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/150/81/373/15081373_20261026102240_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603709840",
-   "likes": 31444,
+   "likes": 31457,
    "change": {
-    "type": "up",
-    "amount": 1
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -85,10 +85,10 @@
    "album": "SCENEDROME",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/115/75/849/11575849_20240826152240_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=37928381",
-   "likes": 174218,
+   "likes": 174221,
    "change": {
-    "type": "down",
-    "amount": 2
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -100,10 +100,10 @@
    "album": "연애의 조건",
    "image": "https://cdnimg.melon.co.kr/cm/album/images/022/10/766/2210766_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=4277838",
-   "likes": 38704,
+   "likes": 38726,
    "change": {
-    "type": "up",
-    "amount": 1
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -115,40 +115,40 @@
    "album": "생각을 멈추다 보면",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/113/69/106/11369106_20231120180538_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=36985781",
-   "likes": 65667,
+   "likes": 65679,
    "change": {
-    "type": "up",
-    "amount": 4
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
   {
    "rank": 9,
-   "song_id": "603712835",
-   "title": "백화요란 (Inside Out)",
-   "artist": "RESCENE (리센느)",
-   "album": "PULSE",
-   "image": "https://cdnimg.melon.co.kr/cm2/album/images/150/82/293/15082293_20261026170443_500.jpg/melon/resize/240/quality/80/optimize",
-   "url": "https://www.melon.com/song/detail.htm?songId=603712835",
-   "likes": 45003,
-   "change": {
-    "type": "down",
-    "amount": 4
-   },
-   "in_usb": false
-  },
-  {
-   "rank": 10,
    "song_id": "39231685",
    "title": "Deja Vu",
    "artist": "RESCENE (리센느)",
    "album": "Dearest",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/118/75/116/11875116_20250701165641_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=39231685",
-   "likes": 80980,
+   "likes": 80981,
+   "change": {
+    "type": "up",
+    "amount": 1
+   },
+   "in_usb": false
+  },
+  {
+   "rank": 10,
+   "song_id": "603712835",
+   "title": "백화요란 (Inside Out)",
+   "artist": "RESCENE (리센느)",
+   "album": "PULSE",
+   "image": "https://cdnimg.melon.co.kr/cm2/album/images/150/82/293/15082293_20261026170443_500.jpg/melon/resize/240/quality/80/optimize",
+   "url": "https://www.melon.com/song/detail.htm?songId=603712835",
+   "likes": 45017,
    "change": {
     "type": "down",
-    "amount": 3
+    "amount": 1
    },
    "in_usb": false
   },
@@ -162,8 +162,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=602024048",
    "likes": 83703,
    "change": {
-    "type": "up",
-    "amount": 8
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -177,8 +177,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=602450078",
    "likes": 83806,
    "change": {
-    "type": "down",
-    "amount": 2
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -190,10 +190,10 @@
    "album": "Looks Can Kill",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/148/09/931/14809931_20261026105712_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603448999",
-   "likes": 24660,
+   "likes": 24662,
    "change": {
-    "type": "up",
-    "amount": 4
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -205,10 +205,10 @@
    "album": "GOLDEN HOUR : Part.5",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/137/52/815/13752815_20260622141535_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=602322595",
-   "likes": 42792,
+   "likes": 42796,
    "change": {
-    "type": "up",
-    "amount": 6
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -220,10 +220,10 @@
    "album": "GREENGREEN",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/133/38/387/13338387_20260504133459_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=601807965",
-   "likes": 95977,
+   "likes": 95982,
    "change": {
-    "type": "up",
-    "amount": 7
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -235,10 +235,10 @@
    "album": "OO-LI",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/111/83/506/11183506_20230426141236_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=36397952",
-   "likes": 312250,
+   "likes": 312249,
    "change": {
-    "type": "up",
-    "amount": 5
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -252,8 +252,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=32061975",
    "likes": 497702,
    "change": {
-    "type": "up",
-    "amount": 7
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -265,10 +265,10 @@
    "album": "J-POP REMAKE Vol.1",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/137/65/551/13765551_20260626112146_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=602377105",
-   "likes": 56966,
+   "likes": 56972,
    "change": {
-    "type": "up",
-    "amount": 7
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -282,8 +282,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=36730261",
    "likes": 152941,
    "change": {
-    "type": "up",
-    "amount": 7
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -295,10 +295,10 @@
    "album": "삐그덕 (Feat. 아이유)",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/149/55/418/14955418_20261019111743_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603538665",
-   "likes": 18074,
+   "likes": 18097,
    "change": {
-    "type": "up",
-    "amount": 3
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -312,8 +312,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=601899271",
    "likes": 62474,
    "change": {
-    "type": "up",
-    "amount": 6
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -325,10 +325,10 @@
    "album": "Good Goodbye",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/121/60/000/12160000_20251014164646_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=600287375",
-   "likes": 127401,
+   "likes": 127402,
    "change": {
-    "type": "up",
-    "amount": 8
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -342,8 +342,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=38104031",
    "likes": 105878,
    "change": {
-    "type": "up",
-    "amount": 6
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -355,10 +355,10 @@
    "album": "개화",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/133/12/398/13312398_20260406142544_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=601719416",
-   "likes": 97945,
+   "likes": 97951,
    "change": {
-    "type": "up",
-    "amount": 7
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -370,10 +370,10 @@
    "album": "Runaway",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/133/12/413/13312413_20260406143448_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=601719493",
-   "likes": 52207,
+   "likes": 52212,
    "change": {
-    "type": "down",
-    "amount": 9
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -385,10 +385,10 @@
    "album": "LEMONADE - The 2nd Album",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/133/84/085/13384085_20260528181046_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=602115220",
-   "likes": 62420,
+   "likes": 62422,
    "change": {
-    "type": "up",
-    "amount": 8
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -402,8 +402,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=4446485",
    "likes": 328154,
    "change": {
-    "type": "up",
-    "amount": 9
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -415,10 +415,10 @@
    "album": "성장 - THE 3RD MINI ALBUM",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/114/77/689/11477689_20240507151429_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=37473973",
-   "likes": 98958,
+   "likes": 98960,
    "change": {
-    "type": "up",
-    "amount": 7
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -430,10 +430,10 @@
    "album": "LOVE CATCHER",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/129/08/035/12908035_20260309142026_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=601479669",
-   "likes": 54710,
+   "likes": 54712,
    "change": {
-    "type": "up",
-    "amount": 9
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -445,10 +445,10 @@
    "album": "자몽살구클럽",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/119/82/233/11982233_20250801150859_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=39504779",
-   "likes": 128754,
+   "likes": 128756,
    "change": {
-    "type": "up",
-    "amount": 7
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -460,10 +460,10 @@
    "album": "타임캡슐",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/121/63/032/12163032_20251015164500_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=600299706",
-   "likes": 81191,
+   "likes": 81192,
    "change": {
-    "type": "up",
-    "amount": 12
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -477,8 +477,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=601719413",
    "likes": 93151,
    "change": {
-    "type": "up",
-    "amount": 23
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -490,10 +490,10 @@
    "album": "어제보다 슬픈 오늘",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/117/56/010/11756010_20250331135525_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=38733032",
-   "likes": 92888,
+   "likes": 92887,
    "change": {
-    "type": "up",
-    "amount": 13
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -505,10 +505,10 @@
    "album": "봄 내음보다 너를",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/105/92/109/10592109_20210413181735_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=33411344",
-   "likes": 147557,
+   "likes": 147565,
    "change": {
-    "type": "up",
-    "amount": 6
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -522,8 +522,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=601332163",
    "likes": 78514,
    "change": {
-    "type": "up",
-    "amount": 4
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -535,10 +535,10 @@
    "album": "PULSE",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/150/82/293/15082293_20261026170443_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603712833",
-   "likes": 35746,
+   "likes": 35748,
    "change": {
-    "type": "down",
-    "amount": 25
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -550,10 +550,10 @@
    "album": "노스탈지아",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/144/94/275/14494275_20260828144050_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=602939768",
-   "likes": 40849,
+   "likes": 40847,
    "change": {
-    "type": "up",
-    "amount": 10
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -565,10 +565,10 @@
    "album": "SCENEDROME",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/115/75/849/11575849_20240826152240_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=37928383",
-   "likes": 46484,
+   "likes": 46488,
    "change": {
-    "type": "down",
-    "amount": 24
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -582,8 +582,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=37228861",
    "likes": 152367,
    "change": {
-    "type": "up",
-    "amount": 15
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -597,8 +597,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=36699489",
    "likes": 181698,
    "change": {
-    "type": "up",
-    "amount": 13
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -612,8 +612,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=37390939",
    "likes": 202672,
    "change": {
-    "type": "up",
-    "amount": 18
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -625,10 +625,10 @@
    "album": "BiiiG",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/144/63/127/14463127_20260819092848_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=602839323",
-   "likes": 59071,
+   "likes": 59072,
    "change": {
-    "type": "down",
-    "amount": 1
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -642,8 +642,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=30962526",
    "likes": 432289,
    "change": {
-    "type": "up",
-    "amount": 17
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -655,10 +655,10 @@
    "album": "PULSE",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/150/82/293/15082293_20261026170443_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603712836",
-   "likes": 32212,
+   "likes": 32215,
    "change": {
-    "type": "down",
-    "amount": 31
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -672,8 +672,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=600243411",
    "likes": 124009,
    "change": {
-    "type": "up",
-    "amount": 6
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -687,8 +687,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=38429074",
    "likes": 112061,
    "change": {
-    "type": "up",
-    "amount": 16
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -700,10 +700,10 @@
    "album": "EROS",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/118/91/198/11891198_20250714145747_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=39307948",
-   "likes": 109332,
+   "likes": 109333,
    "change": {
-    "type": "up",
-    "amount": 20
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -715,10 +715,10 @@
    "album": "전설",
    "image": "https://cdnimg.melon.co.kr/cm/album/images/102/60/858/10260858_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=31666417",
-   "likes": 454466,
+   "likes": 454469,
    "change": {
-    "type": "up",
-    "amount": 18
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -732,8 +732,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=36382580",
    "likes": 197568,
    "change": {
-    "type": "up",
-    "amount": 20
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -747,8 +747,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=601879407",
    "likes": 61180,
    "change": {
-    "type": "up",
-    "amount": 8
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -760,10 +760,10 @@
    "album": "부재",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/105/54/647/10554647_20210127173809_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=33241003",
-   "likes": 91262,
+   "likes": 91261,
    "change": {
-    "type": "up",
-    "amount": 23
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -777,8 +777,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=38300904",
    "likes": 164034,
    "change": {
-    "type": "up",
-    "amount": 18
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -790,10 +790,10 @@
    "album": "만화 (滿花)",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/116/08/521/11608521_20241004161722_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=38071559",
-   "likes": 109830,
+   "likes": 109829,
    "change": {
-    "type": "up",
-    "amount": 19
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -805,10 +805,10 @@
    "album": "HOME SWEET HOME (feat. 태양, 대성)",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/116/47/670/11647670_20241121150855_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=38242510",
-   "likes": 234832,
+   "likes": 234833,
    "change": {
-    "type": "up",
-    "amount": 3
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -820,10 +820,10 @@
    "album": "PULSE",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/150/82/293/15082293_20261026170443_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603712837",
-   "likes": 31330,
+   "likes": 31332,
    "change": {
-    "type": "down",
-    "amount": 40
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -835,10 +835,10 @@
    "album": "너에게 닿기를",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/117/30/411/11730411_20250306095101_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=38626852",
-   "likes": 157669,
+   "likes": 157667,
    "change": {
-    "type": "up",
-    "amount": 26
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -850,10 +850,10 @@
    "album": "CRASH",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/145/75/403/14575403_20260922162806_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603175883",
-   "likes": 18130,
+   "likes": 18132,
    "change": {
-    "type": "up",
-    "amount": 21
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -867,8 +867,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=601237102",
    "likes": 70629,
    "change": {
-    "type": "up",
-    "amount": 18
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -880,10 +880,10 @@
    "album": "이 밤을 빌려 말해요 (오늘 밤, 세계에서 이 사랑이 사라진다 해도 X PLAVE)",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/124/58/320/12458320_20251226151630_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=600791038",
-   "likes": 40307,
+   "likes": 40305,
    "change": {
-    "type": "down",
-    "amount": 31
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -895,10 +895,10 @@
    "album": "Delulu Pack",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/128/06/237/12806237_20260126145002_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=601013499",
-   "likes": 74628,
+   "likes": 74629,
    "change": {
-    "type": "up",
-    "amount": 21
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -912,8 +912,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=602732384",
    "likes": 27231,
    "change": {
-    "type": "up",
-    "amount": 22
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -927,8 +927,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=31927275",
    "likes": 372022,
    "change": {
-    "type": "up",
-    "amount": 17
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -940,10 +940,10 @@
    "album": "이 별로부터",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/145/35/765/14535765_20260909154035_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603052340",
-   "likes": 34896,
+   "likes": 34899,
    "change": {
-    "type": "up",
-    "amount": 17
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -957,8 +957,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=37140709",
    "likes": 179118,
    "change": {
-    "type": "down",
-    "amount": 20
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -972,8 +972,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=37375706",
    "likes": 79509,
    "change": {
-    "type": "up",
-    "amount": 21
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -987,8 +987,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=38123338",
    "likes": 161462,
    "change": {
-    "type": "up",
-    "amount": 23
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1000,10 +1000,10 @@
    "album": "사랑인가 봐 (사내맞선 OST 스페셜 트랙)",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/108/71/162/10871162_20220217162422_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=34657844",
-   "likes": 241117,
+   "likes": 241118,
    "change": {
-    "type": "up",
-    "amount": 25
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1017,8 +1017,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=38123332",
    "likes": 157119,
    "change": {
-    "type": "up",
-    "amount": 19
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1030,10 +1030,10 @@
    "album": "뛰어(JUMP)",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/118/90/480/11890480_20250711095238_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=39298775",
-   "likes": 100936,
+   "likes": 100937,
    "change": {
-    "type": "up",
-    "amount": 30
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -1047,7 +1047,7 @@
    "url": "https://www.melon.com/song/detail.htm?songId=602940179",
    "likes": 20507,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1060,10 +1060,10 @@
    "album": "신사와 아가씨 OST Part.2",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/107/35/654/10735654_20211008114339_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=34061322",
-   "likes": 241937,
+   "likes": 241938,
    "change": {
-    "type": "down",
-    "amount": 39
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1077,8 +1077,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=30232719",
    "likes": 381718,
    "change": {
-    "type": "up",
-    "amount": 21
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -1090,10 +1090,10 @@
    "album": "Fourever",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/114/44/397/11444397_20240318115810_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=37323944",
-   "likes": 219822,
+   "likes": 219823,
    "change": {
-    "type": "up",
-    "amount": 17
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1107,8 +1107,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=33496587",
    "likes": 226623,
    "change": {
-    "type": "up",
-    "amount": 23
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1120,9 +1120,9 @@
    "album": "KPop Demon Hunters (Soundtrack from the Netflix Film)",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/118/59/863/11859863_20250620104512_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=39166708",
-   "likes": 193787,
+   "likes": 193788,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1137,8 +1137,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=34753369",
    "likes": 87935,
    "change": {
-    "type": "up",
-    "amount": 12
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1152,8 +1152,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=37145732",
    "likes": 227769,
    "change": {
-    "type": "up",
-    "amount": 18
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1167,8 +1167,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=602313594",
    "likes": 37135,
    "change": {
-    "type": "up",
-    "amount": 13
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1182,7 +1182,7 @@
    "url": "https://www.melon.com/song/detail.htm?songId=602552833",
    "likes": 31622,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1195,9 +1195,9 @@
    "album": "Die With A Smile",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/115/68/901/11568901_20240816130602_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=37901626",
-   "likes": 144420,
+   "likes": 144421,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1212,7 +1212,7 @@
    "url": "https://www.melon.com/song/detail.htm?songId=37323943",
    "likes": 204316,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": true
@@ -1227,8 +1227,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=38426197",
    "likes": 191964,
    "change": {
-    "type": "up",
-    "amount": 18
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -1242,7 +1242,7 @@
    "url": "https://www.melon.com/song/detail.htm?songId=38629386",
    "likes": 114408,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": true
@@ -1255,9 +1255,9 @@
    "album": "APT.",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/116/19/809/11619809_20241018103507_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=38120327",
-   "likes": 223019,
+   "likes": 223020,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": true
@@ -1270,10 +1270,10 @@
    "album": "Seven (feat. Latto) - Clean Ver.",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/112/86/070/11286070_20230713181059_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=36617841",
-   "likes": 234462,
+   "likes": 234463,
    "change": {
-    "type": "down",
-    "amount": 17
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -1285,9 +1285,9 @@
    "album": "이 별로부터",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/145/35/765/14535765_20260909154035_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603052339",
-   "likes": 35010,
+   "likes": 35011,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1302,8 +1302,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=30244931",
    "likes": 498821,
    "change": {
-    "type": "down",
-    "amount": 26
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -1315,9 +1315,9 @@
    "album": "Said & Done",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/133/88/831/13388831_20260512184549_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=601983813",
-   "likes": 23926,
+   "likes": 23931,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1332,8 +1332,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=32872978",
    "likes": 458420,
    "change": {
-    "type": "down",
-    "amount": 14
+    "type": "same",
+    "amount": 0
    },
    "in_usb": true
   },
@@ -1345,10 +1345,10 @@
    "album": "ARIRANG",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/129/27/820/12927820_20260320091310_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=601555642",
-   "likes": 65223,
+   "likes": 65224,
    "change": {
-    "type": "down",
-    "amount": 26
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1362,7 +1362,7 @@
    "url": "https://www.melon.com/song/detail.htm?songId=1556553",
    "likes": 131469,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1375,9 +1375,9 @@
    "album": "All That Love",
    "image": "https://cdnimg.melon.co.kr/cm/album/images/003/14/795/314795_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=1121123",
-   "likes": 77930,
+   "likes": 77933,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1392,7 +1392,7 @@
    "url": "https://www.melon.com/song/detail.htm?songId=603019497",
    "likes": 20123,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1405,10 +1405,10 @@
    "album": "IM HERO",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/109/23/444/10923444_20220502140600_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=34908740",
-   "likes": 129946,
+   "likes": 129947,
    "change": {
-    "type": "down",
-    "amount": 42
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1422,8 +1422,8 @@
    "url": "https://www.melon.com/song/detail.htm?songId=603339939",
    "likes": 32284,
    "change": {
-    "type": "down",
-    "amount": 45
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1435,9 +1435,9 @@
    "album": "NewJeans 1st EP 'New Jeans'",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/110/11/565/11011565_20220801102637_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=35454426",
-   "likes": 318721,
+   "likes": 318722,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1450,9 +1450,9 @@
    "album": "SUPER REAL ME",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/114/50/069/11450069_20240325110702_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=37347911",
-   "likes": 150409,
+   "likes": 150410,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1465,10 +1465,10 @@
    "album": "DREAM AFTER DREAM",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/150/04/542/15004542_20261106160240_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=603574639",
-   "likes": 18575,
+   "likes": 18583,
    "change": {
-    "type": "down",
-    "amount": 65
+    "type": "same",
+    "amount": 0
    },
    "in_usb": false
   },
@@ -1480,9 +1480,9 @@
    "album": "달리 표현할 수 없어요",
    "image": "https://cdnimg.melon.co.kr/cm2/album/images/121/76/812/12176812_20251024184132_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=600359330",
-   "likes": 47038,
+   "likes": 47037,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
@@ -1495,9 +1495,9 @@
    "album": "국화꽃 향기 OST",
    "image": "https://cdnimg.melon.co.kr/cm/album/images/000/28/985/28985_500.jpg/melon/resize/240/quality/80/optimize",
    "url": "https://www.melon.com/song/detail.htm?songId=418168",
-   "likes": 189571,
+   "likes": 189574,
    "change": {
-    "type": "new",
+    "type": "same",
     "amount": 0
    },
    "in_usb": false
